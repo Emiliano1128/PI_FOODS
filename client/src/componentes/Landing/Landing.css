@@ -1,0 +1,48 @@
+
+.landing{
+    display: flex;
+    background-image: url('../../imagenes/proyecto_PiFood.jpg');  
+    background-color: rgb(59, 11, 11);
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    transition: background-color 1s; 
+}
+.landing:hover{
+    background-color: black;
+}
+.buttonLanding{
+    margin-top: 300px;
+    margin-left: 650px; 
+    /* margin: auto; */
+   /*  width: 70px;
+    height: 70px; */
+    border-radius: 25%; 
+    border: solid 2px rgb(68, 26, 26)66;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: rgb(168, 171, 168);
+    box-shadow: 0 0 50px 30px rgb(222, 33, 33);
+}
+
+.buttonLanding:hover{
+    background-color:  #d2403d   ;
+    color: whitesmoke;
+    border: solid 3px;
+}
+
+
+@media only screen and (max-width: 900px){
+    .buttonLanding{
+        margin-top: 230px;
+        margin-left: 347px;
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+
+    }
+} 

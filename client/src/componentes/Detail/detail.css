@@ -1,0 +1,30 @@
+.detail{
+    border: solid 3px rgb(92, 15, 122);
+    border-radius: 10px;
+    width: 30%;
+    height: fit-content;
+    padding: 15px;
+    padding-left: 5px;
+    justify-content: space-around;
+    background-color: #000000;
+    margin: 10px auto;
+    box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);
+    opacity: 0.9;
+    color: white;
+}
+.detail img{
+    max-width: 100%;
+}
+.detail:hover{
+    background-color: #040005;
+    color: #d797f0b7;
+    border: 2px solid rgb(147, 45, 243);
+}
+.button_detail{
+    color: blueviolet;
+    background-color: black;
+    border: 1px solid blueviolet;
+}
+.button_detail:hover{
+    background-color: rgba(0, 0, 0, 0.527);
+}

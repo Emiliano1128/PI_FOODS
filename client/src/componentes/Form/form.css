@@ -1,0 +1,24 @@
+.formulario{
+    background-image: url('../../imagenes/form2_pifood.jpg');
+    background-color: rgba(0, 0, 0, 0.801);
+    background-repeat: repeat;
+    color: blueviolet;
+    height: 100%; 
+    max-height: 100%;
+} 
+form {
+    background-color: rgba(0, 0, 0, 0.795);
+    border: 1px solid black;
+    width: 200px;
+    margin: auto;
+}
+.formularios_seldas{
+    margin: 10px;
+}
+.button_form{
+    color: blueviolet;
+    background-color: black;
+}
+.button_form:hover{
+    background-color: rgba(0, 0, 0, 0.527);
+}
