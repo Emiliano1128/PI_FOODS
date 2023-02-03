@@ -63,7 +63,8 @@ export default function Form (){
     }
 
     const handlerSelect = (e)=>{
-        setForm({
+        if(!form.diets.includes(e.target.value)){
+            setForm({
             ...form,
             diets: [...form.diets, e.target.value]
         })
@@ -71,6 +72,7 @@ export default function Form (){
             ...form,
             diets: [...form.diets, e.target.value]
         }))
+        }
     }
 
     const crearReceta = (receta)=>{
@@ -140,6 +142,10 @@ export default function Form (){
                         }
                     </select>
                     {error.diets && <lebel>{error.diets}</lebel>}
+                    {
+
+                        form.diets.map((dieta) => <p>{dieta}</p>)
+                    }
                 </div>
                 <div className="formularios_seldas">
                     {

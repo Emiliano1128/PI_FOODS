@@ -11,10 +11,10 @@ function App() {
     <div className="App">
         <Switch>
          <Route exact path='/'><Landing/></Route> 
-         {/* <Route path='/'> <Navbar/> </Route> */}
          <Route path='/home'><Navbar/><Home/></Route>
          <Route exact path='/form'><Navbar/><Form/></Route>
-         <Route exact path='/detail/:id'><Navbar/><Detail/></Route>  
+         <Route exact path='/detail/:id'><Navbar/><Detail/></Route>
+         <Route path='*'>Ruta Invalida</Route>  
          </Switch>
     </div> 
   );

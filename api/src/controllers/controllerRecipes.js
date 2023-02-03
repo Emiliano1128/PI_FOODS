@@ -2,12 +2,12 @@ require ('dotenv').config();
 const { API_KEY, URL,COMPLEMENTO/* API_KEY_DOS */} = process.env;
 const axios = require('axios');
 const {Recipe, Diets} = require('../db');
- const data = require('../preCarga/foodComplexSearch.json')  
+ /* const data = require('../preCarga/foodComplexSearch.json') */  
 
 
 const getRecipesApi = async () => {
-    /* const pedido = await axios.get(`${URL}${API_KEY}${COMPLEMENTO}`) */
-    const api = /* pedido. */data.results.map((receta)=> {return {
+    const pedido = await axios.get(`${URL}${API_KEY}${COMPLEMENTO}`) 
+    const api = pedido.data.results.map((receta)=> {return {
         name: receta.title,
         image: receta.image,
         id: receta.id,
@@ -15,7 +15,7 @@ const getRecipesApi = async () => {
         dishType: receta.dishTypes,
         diets: receta.diets,
         healthScore: receta.healthScore,
-        steps: receta.analyzedInstructions[0]/* .steps.map((unidad)=>{return {number: unidad.number, step: unidad.step}}) */ 
+        steps: receta.analyzedInstructions[0] 
     }})
     return api
 }
@@ -91,13 +91,5 @@ const recipePost = async (req,res)=>{
         res.status(400).send({message: error.message})
     }
 }
-/* const deleteRecipe = async (req,res) => {
-    const {id} = req.params;
-    try {
-        const buscar = await getAllRecipes()
-        const encontrado = buscar.filter(receta => receta.id !== id)
-    } catch (error) {
-        
-    }
-} */
+
 module.exports = {recipes, recipeID, recipePost}
