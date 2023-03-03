@@ -89,11 +89,12 @@ export default function Home (){
             
             <Paginacion prevHandler={prevHandler} nextHandler={nextHandler} currentPage={currentPage} 
             paginasTotales={paginasTotales}/>
-            
+            <div className="contenedor_cards">
             {
                bloques.map((receta,index)=> <Card key={index} name={receta.name} image={receta.image} id={receta.id}
                   diets={receta.diets} />)
             }
+            </div>
             </div>
     )
 }
